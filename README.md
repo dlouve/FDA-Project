@@ -6,7 +6,11 @@ This data engineering project aims to leverage the FDA API to extract data, whic
 The openFDA drug enforcement reports API returns data from the FDA Recall Enterprise System (RES), a database that contains information on recall event information submitted to FDA. Currently, this data covers publicly releasable records from 2004-present. This project works with data from 01.01.2023 to 31.12.2023
 
 # Technologies
-This project utilizes a variety of technologies, including Python, Microsoft Azure services like Data Factory and Blob Storage, Snowflake, and Tableau.
+This project utilizes a variety of technologies, including:
+- Python
+- Microsoft Azure services like Data Factory and Blob Storage
+- Snowflake
+- Tableau
 
 # Technical To Do's
 - pip install snowflake-connector-python
