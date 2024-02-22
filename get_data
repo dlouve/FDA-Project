@@ -8,7 +8,7 @@ skip = 0      # Initial value for skipping results
 all_results = []  # List to store all results
 
 # API endpoint drugs/enforcement
-url = 'https://api.fda.gov/drug/enforcement.json?api_key=1FNM9QdLhmq3npjTwcSvnJESK2T96IvoT74iU6UU&search=report_date:[20230101+TO+20231231]&limit={}&skip={}'  
+url = 'https://api.fda.gov/drug/enforcement.json?api_key=XXXXXXXXXXX=report_date:[20230101+TO+20231231]&limit={}&skip={}'  
 
 while True:
     # Make API request
@@ -45,7 +45,7 @@ json_data = data.to_json(orient='records', lines=True)
 print(json_data)
 
 # Azure Blob Storage credentials
-connection_string = "DefaultEndpointsProtocol=https;AccountName=datalake8273292;AccountKey=yhK/r0RSjnvklegkT7BU/7yCj2oDsgbYkqNUXCXpYcIMLr1yRsCscNR1JF+DjKkHKZeKtjiYNwdM+AStqr7W6g==;EndpointSuffix=core.windows.net"
+connection_string = "XXXXXXXXXXXXX"
 container_name = "fda-data/raw-data"
 blob_name = "fda_raw.json"
 
