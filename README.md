@@ -1,5 +1,4 @@
-# FDA-Project
-Project Target
+# Project Target
 This data engineering project aims to leverage the FDA API to extract data, which will then be stored in Azure Blob Storage. Subsequently, Azure Data Factory will be utilized for data cleaning and transformation processes. The transformed data will be loaded into Snowflake to facilitate the generation of insights. Finally, Tableau will be employed for visualizing the data, enabling comprehensive analysis and interpretation.
 
 # Data Source
