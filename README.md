@@ -9,15 +9,15 @@ The openFDA drug enforcement reports API returns data from the FDA Recall Enterp
 This project utilizes a variety of technologies, including Python, Microsoft Azure services like Data Factory and Blob Storage, Snowflake, and Tableau.
 
 # Technical To Do's
-pip install snowflake-connector-python
-check the snowflake connector is installed: pip list | Select-String snowflake
-pip install azure-storage-blob
-pip install requests
-pip install pandas
-install visual studio code
-install python
-create a azure account 
-create a snowflake account
-create a tableau account
+- pip install snowflake-connector-python
+- check the snowflake connector is installed: pip list | Select-String snowflake
+- pip install azure-storage-blob
+- pip install requests
+- pip install pandas
+- install visual studio code
+- install python
+- create a azure account 
+- create a snowflake account
+- create a tableau account
 
 
