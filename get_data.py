@@ -35,6 +35,17 @@ while True:
         print('Failed to fetch data from the API:', response.status_code)
         break
 
+# To create a table in Snowflake with the correct data types and lengths, the maximum length per attribute is determined here
+max_lengths = {}
+for col in data.columns:
+    max_length_index = data[col].apply(lambda x: len(str(x))).idxmax()
+    max_length = len(str(data.loc[max_length_index, col]))
+    max_lengths[col] = {'Row': max_length_index, 'Max Length': max_length}
+
+# Print the result
+for col, info in max_lengths.items():
+    print(f'Column: {col}, Row: {info["Row"]}, Max Length: {info["Max Length"]}')
+
 # Convert all results to a DataFrame to have a first look at data
 data = pd.DataFrame(all_results)
 #print(data)
