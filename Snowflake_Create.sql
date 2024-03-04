@@ -11,6 +11,21 @@ CREATE DATABASE IF NOT EXISTS database_fda;
 /*Create a SCHEMA*/
 CREATE SCHEMA IF NOT EXISTS schema_fda;
 
+
+/*Prework for creating a table in snowflake*/
+----------------
+# To create a table in Snowflake with the correct data types and lengths, the maximum length per attribute is determined here
+max_lengths = {}
+for col in data.columns:
+    max_length_index = data[col].apply(lambda x: len(str(x))).idxmax()
+    max_length = len(str(data.loc[max_length_index, col]))
+    max_lengths[col] = {'Row': max_length_index, 'Max Length': max_length}
+
+# Print the result
+for col, info in max_lengths.items():
+    print(f'Column: {col}, Row: {info["Row"]}, Max Length: {info["Max Length"]}')
+-------------------
+
 /*Create a TABLE*/
 CREATE TABLE IF NOT EXISTS enforcement (
     country VARCHAR(13),
